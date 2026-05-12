@@ -717,6 +717,7 @@
               <label class="form-label small fw-semibold text-muted">Password Baru (Opsional)</label>
               <input type="password" class="form-control border-0 bg-light py-2 rounded-3" id="profile_password" placeholder="Kosongkan jika tidak ingin diubah">
             </div>
+            
             <div class="text-end mt-4 pt-4 border-top">
               <button type="button" class="btn btn-light me-2 rounded-pill px-4 py-2 fw-semibold" data-bs-dismiss="modal">Batal</button>
               <button type="submit" class="btn text-white rounded-pill px-4 py-2 fw-semibold shadow-sm" style="background-color: var(--primary);">Simpan Perubahan</button>
@@ -815,7 +816,7 @@
       function gasRun(funcName) {
         var args = Array.prototype.slice.call(arguments, 1);
         return new Promise(function(resolve, reject) {
-          if (!GAS_API_URL || GAS_API_URL.includes("https://script.google.com/macros/s/AKfycbzkcxjn0nGeCcMIXNNtf4nWriBW_s7Exwj91dyp6AHCB1pA7TMZssSWU_nG5mrfyImS6A/exec")) {
+          if (!GAS_API_URL || GAS_API_URL === "") {
               reject(new Error("URL API belum dikonfigurasi. Silakan isi GAS_API_URL di source code."));
               return;
           }
