@@ -737,7 +737,7 @@
       // ========================================================
       // KONFIGURASI API (GANTI DENGAN URL WEB APP GAS ANDA)
       // ========================================================
-      const GAS_API_URL = "https://script.google.com/macros/s/AKfycbw_J4gDHY3JK8cRj46mflw12TsMVuowhVdoq1wstLaogwRbrhfLyaTmeqQOtFz763Vawg/exec";
+      const GAS_API_URL = "https://script.google.com/macros/s/AKfycbzkcxjn0nGeCcMIXNNtf4nWriBW_s7Exwj91dyp6AHCB1pA7TMZssSWU_nG5mrfyImS6A/exec";
       // ========================================================
 
       var activePage = 'dashboard';
@@ -815,7 +815,7 @@
       function gasRun(funcName) {
         var args = Array.prototype.slice.call(arguments, 1);
         return new Promise(function(resolve, reject) {
-          if (!GAS_API_URL || GAS_API_URL.includes("https://script.google.com/macros/s/AKfycbw_J4gDHY3JK8cRj46mflw12TsMVuowhVdoq1wstLaogwRbrhfLyaTmeqQOtFz763Vawg/exec")) {
+          if (!GAS_API_URL || GAS_API_URL.includes("https://script.google.com/macros/s/AKfycbzkcxjn0nGeCcMIXNNtf4nWriBW_s7Exwj91dyp6AHCB1pA7TMZssSWU_nG5mrfyImS6A/exec")) {
               reject(new Error("URL API belum dikonfigurasi. Silakan isi GAS_API_URL di source code."));
               return;
           }
